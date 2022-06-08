@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
+import React, { useState } from "react";
+import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
+import AddSongs from "./Components/AddSongs/AddSongs";
 
 function App() {
-
-  const [entries, setEntries] = useState([])
+  const [songs, setSongs] = useState([]);
 
   return (
     <div>
-      <DisplayEntries entries = {entries}/>
+      <DisplaySongs songs={songs} />
+      <AddSongs />
     </div>
   );
 }

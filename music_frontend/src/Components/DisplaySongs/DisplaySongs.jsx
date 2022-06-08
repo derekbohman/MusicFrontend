@@ -1,9 +1,9 @@
-const DisplayEntries = (props) => {
+const DisplaySongs = (props) => {
   return (
     <table>
       <thead>
         <tr>
-          <th>Entry Number</th>
+          <th>Song Number</th>
           <th>Title</th>
           <th>Artist</th>
           <th>Album</th>
@@ -13,16 +13,16 @@ const DisplayEntries = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.entries.map((entry, index) => {
+        {props.songs.map((song, index) => {
           return (
             <tr>
               <td>{index + 1}</td>
-              <td>{entry.title}</td>
-              <td>{entry.artist}</td>
-              <td>{entry.album}</td>
-              <td>{entry.genre}</td>
-              <td>{entry.release_date}</td>
-              <td>{entry.options}</td>
+              <td>{song.title}</td>
+              <td>{song.artist}</td>
+              <td>{song.album}</td>
+              <td>{song.genre}</td>
+              <td>{song.release_date}</td>
+              <td>{song.options}</td>
             </tr>
           );
         })}
@@ -31,4 +31,4 @@ const DisplayEntries = (props) => {
   );
 };
 
-export default DisplayEntries;
+export default DisplaySongs;
