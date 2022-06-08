@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 
 function App() {
 
@@ -7,28 +7,7 @@ function App() {
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Genre</th>
-            <th>Release Date</th>
-            <th>Options</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Enter Sandman</td>
-            <td>Metallica</td>
-            <td>Metallica</td>
-            <td>Heavy Metal</td>
-            <td>1991-08-12</td>
-            <td>Add/Delete</td>
-          </tr>
-        </tbody>
-      </table>
+      <DisplayEntries entries = {entries}/>
     </div>
   );
 }
