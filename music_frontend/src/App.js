@@ -5,10 +5,15 @@ import AddSongs from "./Components/AddSongs/AddSongs";
 function App() {
   const [songs, setSongs] = useState([]);
 
+  function addNewSong(addedSong) {
+    let tempAddedSong = [...songs, addedSong];
+    setSongs(tempAddedSong);
+  }
+
   return (
     <div>
       <DisplaySongs songs={songs} />
-      <AddSongs />
+      <AddSongs addNewSong={addNewSong} />
     </div>
   );
 }

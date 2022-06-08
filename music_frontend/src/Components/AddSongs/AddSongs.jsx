@@ -8,14 +8,15 @@ const AddSongs = (props) => {
   const [release_date, setReleaseDate] = useState("");
 
   function submitForm(event) {
-      event.preventDefault();
-      let newSong = {
-          title: title,
-          artist: artist,
-          album: album,
-          genre: genre,
-          release_date: release_date
-      };
+    event.preventDefault();
+    let newSong = {
+      title: title,
+      artist: artist,
+      album: album,
+      genre: genre,
+      release_date: release_date,
+    };
+    props.addNewSong(newSong);
   }
 
   return (
