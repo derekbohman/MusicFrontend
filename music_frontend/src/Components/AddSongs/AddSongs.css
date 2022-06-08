@@ -1,0 +1,15 @@
+.addForm {
+    display: grid;
+    justify-content: center;
+}
+
+.addForm input {
+    width: 8rem;
+}
+
+.button {
+    width: 7rem;
+    margin-left: 25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
 import AddSongs from "./Components/AddSongs/AddSongs";
+import "./App.css";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -11,7 +12,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="mainContent">
       <DisplaySongs songs={songs} />
       <AddSongs addNewSong={addNewSong} />
     </div>

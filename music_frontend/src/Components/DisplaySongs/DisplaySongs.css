@@ -1,0 +1,28 @@
+.displayTable {
+  display: grid;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.tableData td{
+    border: solid black 0.1rem;
+    text-align: center;
+    background-color: white;
+}
+
+.columnHeadings th {
+    text-align: center;
+    border: solid black 0.2rem;
+    width: 3rem;
+    padding: none;
+}
+
+.addSongTitle {
+  display: flex;
+  justify-content: center;
+}
