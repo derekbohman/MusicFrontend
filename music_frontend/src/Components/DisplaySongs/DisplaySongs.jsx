@@ -15,7 +15,7 @@ const DisplaySongs = (props) => {
             <th>Album</th>
             <th>Genre</th>
             <th>Release Date</th>
-            <th>Options</th>
+            <th>Song Options</th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +27,17 @@ const DisplaySongs = (props) => {
                 <td>{song.album}</td>
                 <td>{song.genre}</td>
                 <td>{song.release_date}</td>
-                <td>{song.options}</td>
+                <td>
+                  <div className="displayButtons">
+                    <div className="deleteButton">
+                      <button type="submit">Delete Song</button>
+                    </div>
+                    <div className="editButton">
+                      <button type="submit">Edit Song</button>
+                    </div>
+                  </div>
+                  {song.options}
+                </td>
               </tr>
             );
           })}
