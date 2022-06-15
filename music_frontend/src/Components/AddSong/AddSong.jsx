@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./AddSongs.css";
+import "./AddSong.css";
 
-const AddSongs = (props) => {
+const AddSong = (props) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
@@ -14,10 +14,15 @@ const AddSongs = (props) => {
       title: title,
       artist: artist,
       album: album,
-      genre: genre,
       release_date: release_date,
+      genre: genre,
     };
-    props.addNewSong(newSong);
+    props.addSong(newSong);
+    setTitle("");
+    setArtist("");
+    setAlbum("");
+    setReleaseDate("");
+    setGenre("");
   }
 
   return (
@@ -41,17 +46,17 @@ const AddSongs = (props) => {
           value={album}
           onChange={(event) => setAlbum(event.target.value)}
         />
-        <label>Genre</label>
-        <input
-          type="text"
-          value={genre}
-          onChange={(event) => setGenre(event.target.value)}
-        />
         <label>Release Date</label>
         <input
           type="date"
           value={release_date}
           onChange={(event) => setReleaseDate(event.target.value)}
+        />
+        <label>Genre</label>
+        <input
+          type="text"
+          value={genre}
+          onChange={(event) => setGenre(event.target.value)}
         />
         <div className="button">
           <button type="submit">Add Song</button>
@@ -61,4 +66,4 @@ const AddSongs = (props) => {
   );
 };
 
-export default AddSongs;
+export default AddSong;
