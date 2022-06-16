@@ -5,19 +5,20 @@ const AddSong = (props) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
-  const [genre, setGenre] = useState("");
   const [release_date, setReleaseDate] = useState("");
+  const [genre, setGenre] = useState("");
 
   function submitForm(event) {
     event.preventDefault();
-    let newSong = {
+    let song = {
       title: title,
       artist: artist,
       album: album,
       release_date: release_date,
       genre: genre,
     };
-    props.addSong(newSong);
+    props.addSong(song);
+
     setTitle("");
     setArtist("");
     setAlbum("");
@@ -28,6 +29,9 @@ const AddSong = (props) => {
   return (
     <div className="addForm">
       <form onSubmit={submitForm}>
+        <div className="addSongTitle">
+          <h2>Add a Song</h2>
+        </div>
         <label>Title</label>
         <input
           type="text"

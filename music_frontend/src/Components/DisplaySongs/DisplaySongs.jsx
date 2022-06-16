@@ -2,9 +2,18 @@ import "./DisplaySongs.css";
 
 const DisplaySongs = (props) => {
 
+// rather than mapping over props.songs we want to filter the songs first and then save the filter reuslt 
+// in a hook, we then can map over the filtered songs from our hook
 
+//make a hook, id call it filterdSongs and setFilteredSongs
 
+// make a function that filter props.songs.filter(song => 
+//song.title.includes(props.searchTerm)
+//)
 
+// make a single input to get searchTerm from user
+// this could be its own compoent 
+// data should go from from to app level and then get passed down into this compoenent
   return (
     <div className="displayTable">
       <br></br>
@@ -36,9 +45,9 @@ const DisplaySongs = (props) => {
                     <div className="deleteButton" >
                       <button type="submit" onClick={() => props.deleteSong(song)}>Delete Song</button>
                     </div>
-                    <div className="editButton">
+                    {/* <div className="editButton">
                       <button type="submit">Edit Song</button>
-                    </div>
+                    </div> */}
                   </div>
                 </td>
               </tr>
@@ -46,10 +55,6 @@ const DisplaySongs = (props) => {
           })}
         </tbody>
       </table>
-      <br></br>
-      <div className="addSongTitle">
-        <h2>Add a Song</h2>
-      </div>
     </div>
   );
 };
