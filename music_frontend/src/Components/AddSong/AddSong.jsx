@@ -32,37 +32,39 @@ const AddSong = (props) => {
         <div className="addSongTitle">
           <h2>Add a Song</h2>
         </div>
-        <label>Title</label>
-        <input
-          type="text"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
-        <label>Artist</label>
-        <input
-          type="text"
-          value={artist}
-          onChange={(event) => setArtist(event.target.value)}
-        />
-        <label>Album</label>
-        <input
-          type="text"
-          value={album}
-          onChange={(event) => setAlbum(event.target.value)}
-        />
-        <label>Release Date</label>
-        <input
-          type="date"
-          value={release_date}
-          onChange={(event) => setReleaseDate(event.target.value)}
-        />
-        <label>Genre</label>
-        <input
-          type="text"
-          value={genre}
-          onChange={(event) => setGenre(event.target.value)}
-        />
-        <div className="button">
+        <div className="addSection">
+          <label>Title</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
+          <label>Artist</label>
+          <input
+            type="text"
+            value={artist}
+            onChange={(event) => setArtist(event.target.value)}
+          />
+          <label>Album</label>
+          <input
+            type="text"
+            value={album}
+            onChange={(event) => setAlbum(event.target.value)}
+          />
+          <label>Release Date</label>
+          <input
+            type="date"
+            value={release_date}
+            onChange={(event) => setReleaseDate(event.target.value)}
+          />
+          <label>Genre</label>
+          <input
+            type="text"
+            value={genre}
+            onChange={(event) => setGenre(event.target.value)}
+          />
+        </div>
+        <div className="addButton">
           <button type="submit">Add Song</button>
         </div>
       </form>

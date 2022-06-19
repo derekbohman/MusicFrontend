@@ -7,7 +7,7 @@
   width: 9rem;
 }
 
-.button {
+.addButton {
   width: 7rem;
   margin-left: 27rem;
   margin-top: 1rem;
@@ -18,4 +18,9 @@
   display: flex;
   justify-content: center;
   padding-top: 1rem;
+}
+
+.addSection {
+  display: flex;
+  justify-content: center;
 }

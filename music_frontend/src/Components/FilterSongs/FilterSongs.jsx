@@ -5,15 +5,17 @@ const FilterSongs = (props) => {
   return (
     <div className="addForm">
       <form>
-        <div className="addSongTitle">
+        <div className="filterSongTitle">
           <h2>Filter a Song</h2>
         </div>
-        <label>Search</label>
-        <input
-          type="text"
-          onChange={(event) => props.setSearchTerm(event.target.value)}
-        />
-        <div className="button">
+        <div className="search">
+          <label>Search</label>
+          <input
+            type="text"
+            onChange={(event) => props.setSearchTerm(event.target.value)}
+          />
+        </div>
+        <div className="filterButton">
           <button type="submit">Filter Song</button>
         </div>
       </form>
