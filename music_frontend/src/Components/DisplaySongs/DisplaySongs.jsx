@@ -1,19 +1,15 @@
 import "./DisplaySongs.css";
 
 const DisplaySongs = (props) => {
+  const filterMusic = props.songs.filter(
+    (song) =>
+      song.title.includes(props.searchTerm) ||
+      song.artist.includes(props.searchTerm) ||
+      song.album.includes(props.searchTerm) ||
+      song.release_date.includes(props.searchTerm) ||
+      song.genre.includes(props.searchTerm)
+  );
 
-// rather than mapping over props.songs we want to filter the songs first and then save the filter reuslt 
-// in a hook, we then can map over the filtered songs from our hook
-
-//make a hook, id call it filterdSongs and setFilteredSongs
-
-// make a function that filter props.songs.filter(song => 
-//song.title.includes(props.searchTerm)
-//)
-
-// make a single input to get searchTerm from user
-// this could be its own compoent 
-// data should go from from to app level and then get passed down into this compoenent
   return (
     <div className="displayTable">
       <br></br>
@@ -32,7 +28,7 @@ const DisplaySongs = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.songs.map((song) => {
+          {filterMusic.map((song) => {
             return (
               <tr>
                 <td>{song.title}</td>
@@ -42,8 +38,13 @@ const DisplaySongs = (props) => {
                 <td>{song.genre}</td>
                 <td>
                   <div className="displayButtons">
-                    <div className="deleteButton" >
-                      <button type="submit" onClick={() => props.deleteSong(song)}>Delete Song</button>
+                    <div className="deleteButton">
+                      <button
+                        type="submit"
+                        onClick={() => props.deleteSong(song)}
+                      >
+                        Delete Song
+                      </button>
                     </div>
                     {/* <div className="editButton">
                       <button type="submit">Edit Song</button>

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
 import AddSong from "./Components/AddSong/AddSong";
-// import FilterSongs from "./Components/FilterSongs/FilterSongs";
+import FilterSongs from "./Components/FilterSongs/FilterSongs";
 import "./App.css";
 
 function App() {
   const [songs, setSongs] = useState([]);
-  // const [filteredSongs, setFilteredSongs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState([""]);
 
   useEffect(() => {
     displaySongs();
@@ -34,18 +34,11 @@ function App() {
     }
   }
 
-  // async function filterSongs(filteredSongs) {
-  //   let response = await axios.get(
-  //     `http://127.0.0.1:8000/songs/${filteredSongs.artist}/`
-  //   );
-  //   setFilteredSongs(response.data);
-  // }
-
   return (
     <div className="mainContent">
-      <DisplaySongs songs={songs} deleteSong={deleteSong} />
+      <DisplaySongs songs={songs} deleteSong={deleteSong} searchTerm={searchTerm}/>
       <AddSong addSong={addSong} />
-      {/* <FilterSongs filterSongs={filterSongs} /> */}
+      <FilterSongs setSearchTerm={setSearchTerm} />
     </div>
   );
 }
