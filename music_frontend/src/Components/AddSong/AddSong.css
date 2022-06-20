@@ -8,8 +8,8 @@
 }
 
 .addButton {
-  width: 7rem;
-  margin-left: 27rem;
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

@@ -6,7 +6,7 @@ const FilterSongs = (props) => {
     <div className="addForm">
       <form>
         <div className="filterSongTitle">
-          <h2>Filter a Song</h2>
+          <h2>Search for a Song</h2>
         </div>
         <div className="search">
           <label>Search</label>
